@@ -106,7 +106,7 @@
 {\large \vspace*{1ex}
     {{\@college} \par}
 \vspace*{1ex}
-    {Diajukan Untuk Memnuhi Kelulusan Matakuliah Intership II \par}
+    {Program Studi D4 Teknik Informatika \par}
 \vspace*{25mm}
     {{\submittedtext} \par}
 \vspace*{1ex}
