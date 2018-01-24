@@ -1,3 +1,157 @@
-\chapter{Sample Title}
+\chapter{Standar Penulisan Latex}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Download template latex di menu intranet situs informatika, kemudian anda upload di sharelatex.com. Beberapa Aturan yang harus dipatuhi :
+\begin{enumerate}
+
+    \item file disimpan dalam format ber ekstensi .tex per chapter masing2 di folder section
+
+    \item gambar disimpan dalam folder figures dengan namagambar
+
+    \item referensi dari google scholar,scholar.google.com
+
+    \item Setiap referensi yang diambil, maka tambahkan dan tuliskan ke dalam file bernama references.bib yang berisi kumpulan bibTex dari referensi. Gunakan standar pengutipan yang baik dan benar
+
+    \item Gambar disebutkan di dalam artikel dengan format sesuai labelnya yaitu \\ \verb|\ref{labelgambar}|. \\ Gambar diselipkan dengan menambahkan blok sintaks :
+    \begin{verbatim}
+    \begin{figure}[ht]
+    \centerline{\includegraphics[width=1\textwidth]
+    {figures/namagambar.JPG}}
+    \caption{penjelasan keterangan gambar.}
+    \label{labelgambar}
+    \end{figure}
+    
+    Contoh :
+    Pada gambar \ref{labelgambar} dijelaskan bahwa 
+    sistem operasi memiliki 3 versi.
+    \end{verbatim}
+
+    \item Referensi disebutkan dengan menyebutkan nama di dalam file bibtex No.4. \\
+    Contoh, Jika Bibtex sudah diinputkan kedalam reference.bib seperti ini :
+    \begin{verbatim}
+    @inproceedings{ganapathi2006windows,
+      title={Windows XP Kernel Crash Analysis.},
+      author={Ganapathi, Archana and Ganapathi, 
+      Viji and Patterson, David A},
+      booktitle={LISA},
+      volume={6},
+      pages={49--159},
+      year={2006}
+    }
+    \end{verbatim}
+    Maka penulisan kalimat di jurnal : \\
+    Dalam sebuah artikel dari Ganapathi yang 
+    menyebutkan bahwa komputasi adalah keniscayan \verb|\cite{ganapathi2006windows}|.
+    
+    \item Penyebutan subbab dan subsubbab diatur dengan cara : \\
+    judul sub bab : \\ 
+    \verb|\section{nama sub bab}| \\
+    judul sub sub bab ditulis dengan :\\ 
+    \verb|\subsection{judul sub sub bab} | \\
+    judul sub sub sub bab ditulis dengan : \\ \verb|\subsubsection{Judul sub sub sub bab} | \\
+    contoh :
+    \begin{verbatim}
+    \section{Sejarah Peta}
+Perkembangan peta dunia tidak luput dari para ahli 
+geografi dan kartografi. Peta dunia yang populer pada saat 
+ini merupakan 
+kontribusi dari para 
+pembuat peta sebelumnya
+
+\subsection{Ptolemy's}
+Ptolemy's diduga membuat peta pada abad ke 2
+\end{verbatim}
+    
+    \item untuk list dan nomor gunakan enumerate atau itemize contoh :
+    \begin{verbatim}
+berikut nama anggota kelompok
+\begin{enumerate}
+\item darso
+\item karyo
+\item doyok
+\end{enumerate}
+
+\begin{enumerate}
+\item
+This is the first item in the numbered list.
+
+\item
+This is the second item in the numbered list.
+\end{enumerate}
+
+\begin{itemize}
+\item
+This is the first item in the itemized list.
+
+\item
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+
+\begin{itemize}
+\item[]
+This is the first item in the itemized list.
+
+\item[]
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+This is the first item in the itemized list.
+\end{itemize}
+    \end{verbatim}
+    
+    \item spesial karakter menggunakan tanda `\verb|\|' didepannya contoh :
+    \begin{verbatim}
+\& 
+\% 
+\$ 
+\#  
+\{ \}
+\_
+\"dalam petik\"
+`dalam petik'
+jika spesial karakter menjadi banyak atau satu baris gunakan verb
+contoh :
+\verb|%$'%&$&'%'%'%&'%|
+    \end{verbatim}
+    
+    \item untuk tabel gunakan table , dan jangan lupa tabel di referensikan pada kalimat berdasarkan labelnya. contoh:
+    \begin{verbatim}
+ini merupakan contoh tabel \ref{table:contoh} ukuran kecil.
+\begin{table}[h]
+\caption{Small Table}
+\centering
+\begin{tabular}{ccc}
+\hline
+one&two&three\\
+\hline
+C&D&E\\
+\hline
+\end{tabular}
+\label{table:contoh}
+\end{table}
+    \end{verbatim}
+    
+    \item untuk rumus gunakan tag equation dan di referensikan pada kalimat dengan tag ref sesuai labelnya contoh:
+    \begin{verbatim}
+Luas permukaan dijelaskan pada rumus \ref{eq:1}.Volume dijelaskan 
+pada rumus \ref{eq:2}.
+$L$ merupakan luas, $\pi$ adalah 3,14.
+\begin{equation}\label{eq:1}
+     L = 4 \pi r^2 \,
+\end{equation}
+ \begin{equation}\label{eq:2}
+     V = \frac{4}{3}\pi r^3
+\end{equation}
+    \end{verbatim}
+    
+    \item untuk kode program menggunakan verbatim
+    \begin{verbatim}
+\ begin{verbatim}
+a = "anu"
+b = "itu"
+c = a + b
+print(c) 
+\ end{verbatim}
+    \end{verbatim}
+\end{enumerate}
+
